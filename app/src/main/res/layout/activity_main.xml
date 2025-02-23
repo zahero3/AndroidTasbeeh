@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Top Heading -->
+    <TextView
+        android:id="@+id/head1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital Tasbeeh"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"/>
+
+    <!-- 2 Heading -->
+    <TextView
+        android:id="@+id/head2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head1"
+        android:text="Developed by: Zaheer Ahamad"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="100dp"/>
+
+    <!-- Screen (Counter Display) -->
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="500dp"
+        android:layout_height="120dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/head2"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        android:elevation="10dp"/>
+
+    <!-- Reset Button-->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/tvCounter"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:text="R"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:background="@drawable/rsetbtn_shape"/>
+
+    <!-- Count Button  -->
+    <Button
+        android:id="@+id/btnCount"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/btnReset"
+        android:layout_centerHorizontal="true"
+        android:text="Click"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:background="@drawable/cntbtn_shape"/>
+
+
+    <!-- Save & Saved Buttons at Bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:text="Save"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:elevation="10dp"/>
+
+        <Button
+            android:id="@+id/btnSaved"
+            android:layout_width="160dp"
+            android:layout_height="70dp"
+            android:text="Saved"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
+</RelativeLayout>
