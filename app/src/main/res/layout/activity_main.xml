@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:padding="16dp"
     android:background="@android:color/white">
 
@@ -10,99 +10,133 @@
         android:id="@+id/head1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Digital Tasbeeh"
-        android:textSize="24sp"
+        android:text="@string/head1"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:paddingBottom="10dp"/>
 
-    <!-- 2 Heading -->
+    <!-- 2nd Heading -->
     <TextView
         android:id="@+id/head2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/head1"
-        android:text="Developed by: Zaheer Ahamad"
-        android:textSize="10sp"
+        android:text="@string/head2"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:paddingBottom="10dp"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="50dp"/>
 
-    <!-- Screen (Counter Display) -->
+    <!-- Counter Display -->
     <TextView
         android:id="@+id/tvCounter"
-        android:layout_width="500dp"
+        android:layout_width="400dp"
         android:layout_height="120dp"
         android:background="@android:color/darker_gray"
         android:gravity="center"
-        android:text="0"
-        android:textSize="40sp"
+        android:text="@string/cntdisplay"
+        android:textSize="60sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/head2"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:padding="10dp"
         android:elevation="10dp"/>
 
-    <!-- Reset Button-->
-    <Button
+    <!-- 3rd Heading -->
+    <TextView
+        android:id="@+id/head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCounter"
+        android:text="@string/head3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- Reset Button -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnReset"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_below="@id/tvCounter"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="30dp"
-        android:text="R"
+        android:layout_marginTop="10dp"
+        android:text="@string/reset"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:elevation="10dp"
-        android:background="@drawable/rsetbtn_shape"/>
+        android:background="@drawable/rsetbtn_shape"
+        android:padding="10dp"/>
 
-    <!-- Count Button  -->
-    <Button
+    <!-- Count Button -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCount"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_below="@+id/btnReset"
         android:layout_centerHorizontal="true"
-        android:text="Click"
+        android:text="@string/click"
         android:textColor="@android:color/white"
         android:textSize="22sp"
         android:textStyle="bold"
         android:elevation="10dp"
-        android:background="@drawable/cntbtn_shape"/>
+        android:background="@drawable/cntbtn_shape"
+        android:layout_marginTop="20dp"/>
 
+    <!-- Save & Saved Buttons -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSave"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="@string/save"
+        android:background="@drawable/savebtn_shape"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/btnCount"
+        android:layout_marginTop="200dp"/>
 
-    <!-- Save & Saved Buttons at Bottom -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaved"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="@string/saved"
+        android:background="@drawable/savedbtn_shape"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:elevation="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btnCount"
+        android:layout_marginTop="200dp"/>
+
+    <!-- Yellow Section: Other Applications -->
     <LinearLayout
+        android:id="@+id/gmsbtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_height="80dp"
+        android:background="#FFBE05"
+        android:padding="10dp"
+        android:layout_below="@id/btnSave"
+        android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="15dp">
 
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="160dp"
-            android:layout_height="70dp"
-            android:text="Save"
-            android:backgroundTint="@android:color/holo_green_dark"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:elevation="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Game"
+        android:textSize="30sp"
+        android:textColor="#119409"
+        android:textStyle="bold"/>
+</LinearLayout>
 
-        <Button
-            android:id="@+id/btnSaved"
-            android:layout_width="160dp"
-            android:layout_height="70dp"
-            android:text="Saved"
-            android:backgroundTint="@android:color/holo_orange_dark"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:elevation="10dp"
-            android:layout_marginStart="20dp"/>
-    </LinearLayout>
 </RelativeLayout>

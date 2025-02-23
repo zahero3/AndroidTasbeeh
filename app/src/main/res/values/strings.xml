@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">tasbeeh</string>
+    <string name="click">COUNT</string>
+    <string name="save">SAVE</string>
+    <string name="saved">SAVED</string>
+    <string name="reset">RESET</string>
+    <string name="cntdisplay">0</string>
+    <string name="head1">Counter</string>
+    <string name="head2">Developed by: Zaheer Ahamad</string>
+    <string name="head3">Save the count</string>
+    <string name="svd">📜 Saved Counts</string>
+    <string name="cls">CLOSE</string>
+
+    <!-- Checkout activity -->
+    <string name="title_activity_checkout">CheckoutActivity</string>
+    <string name="checkout_item_description">Description</string>
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is
+        not available on this phone.
+    </string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for
+        %s!
+    </string>
 </resources>
+
+
+
