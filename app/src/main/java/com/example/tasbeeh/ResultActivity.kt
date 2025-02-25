@@ -19,7 +19,6 @@ class ResultActivity : AppCompatActivity() {
 
         // List of celebrity images in drawable folder
         val celebrityImages = arrayOf(
-            R.drawable.celb2,
             R.drawable.celb5
         )
 

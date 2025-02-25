@@ -5,6 +5,16 @@
     android:gravity="center"
     android:padding="20dp">
 
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your personality matches Deepak Kalal."
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"/>
+
     <ImageView
         android:id="@+id/imgCelebrity"
         android:layout_width="300dp"
