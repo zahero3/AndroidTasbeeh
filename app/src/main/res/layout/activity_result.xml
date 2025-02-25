@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imgCelebrity"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnCloseResult"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="@string/cls"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="#568203"
+        android:layout_below="@id/imgCelebrity"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent ="true"/>
+
+</RelativeLayout>
