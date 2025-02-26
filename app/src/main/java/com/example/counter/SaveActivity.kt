@@ -1,7 +1,6 @@
-package com.example.tasbeeh
+package com.example.counter
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText

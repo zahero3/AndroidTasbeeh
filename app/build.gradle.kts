@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.gms.google-services") // Firebase Plugin
 }
 
 android {
-    namespace = "com.example.tasbeeh"
+    namespace = "com.example.counter"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tasbeeh"
+        applicationId = "com.example.counter"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -63,5 +64,10 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation (libs.androidx.appcompat)
     implementation(libs.material)
-
+    // implementation("com.google.firebase:firebase-database-ktx:21.0.0") // Firebase Realtime Database
+    //implementation("com.google.firebase:firebase-auth-ktx:23.2.0")    // Firebase Authentication (optional)
+    implementation(platform(libs.firebase.bom)) // Firebase BOM
+    implementation("com.google.firebase:firebase-firestore-ktx") // Firestore Database
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
 }

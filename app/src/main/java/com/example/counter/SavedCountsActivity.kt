@@ -1,4 +1,4 @@
-package com.example.tasbeeh
+package com.example.counter
 
 import android.content.Context
 import android.content.Intent

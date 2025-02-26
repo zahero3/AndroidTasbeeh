@@ -9,11 +9,12 @@
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your personality matches Deepak Kalal."
+        android:text="Your are like Deepak Kalal."
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp"
+        android:gravity="center"/>
 
     <ImageView
         android:id="@+id/imgCelebrity"

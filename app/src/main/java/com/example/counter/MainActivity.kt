@@ -1,13 +1,13 @@
-package com.example.tasbeeh
+package com.example.counter
 
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.*
-import android.widget.*
+import android.os.* import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,10 +16,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var head3: TextView  // Reference to head3
     private lateinit var tvCounter: TextView
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var firestore: FirebaseFirestore  // Firestore Database
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initialize Firestore
+        firestore = FirebaseFirestore.getInstance()
 
         // Find views
         tvCounter = findViewById(R.id.tvCounter)
@@ -107,15 +111,31 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    // Function to save count in SharedPreferences
+    // Function to save count in SharedPreferences and Firestore
     private fun saveCount(name: String) {
-        val sharedPreferences = getSharedPreferences("CountPrefs", Context.MODE_PRIVATE)
-
         val prefsEditor = sharedPreferences.edit()
         val timestamp = System.currentTimeMillis()
+
+        // Save to SharedPreferences (Local Storage)
         prefsEditor.putString(name, "$count - $timestamp")
         prefsEditor.apply()
-        Toast.makeText(this, "Saved Successfully", Toast.LENGTH_SHORT).show()
+
+        // Save to Firestore
+        val userId = "user_${System.currentTimeMillis()}"  // Unique key for each entry
+        val countData = hashMapOf(
+            "name" to name,
+            "count" to count,
+            "timestamp" to timestamp
+        )
+
+        firestore.collection("savedCounts").document(userId)
+            .set(countData)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Saved to Firestore!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed to save in Firestore!", Toast.LENGTH_SHORT).show()
+            }
     }
 
     // Function to make the device vibrate
@@ -164,4 +184,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }

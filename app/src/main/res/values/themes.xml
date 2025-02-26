@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Tasbeeh" parent="Theme.MaterialComponents.Light.NoActionBar"/>
+    <style name="Theme.counter" parent="Theme.MaterialComponents.Light.NoActionBar"/>
+
 </resources>
